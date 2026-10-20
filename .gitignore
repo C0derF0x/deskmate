@@ -1,13 +1,135 @@
-# Secrets
-.env
 
-# Python cache
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+.envrc
+
+# Python cache and compiled files
 __pycache__/
-*.pyc
+*.py[codz]
+*$py.class
+*.so
 
 # Virtual environments
 .venv/
 venv/
+env/
+ENV/
+env.bak/
+venv.bak/
 
 # Generated local application data
 data/applications.json
+
+# Distribution and packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Tests and coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+*.lcov
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Logs and databases
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Documentation build output
+docs/_build/
+.pybuilder/
+target/
+site/
+
+# Jupyter and IPython
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# Python tooling
+.pdm-python
+.pdm-build/
+.pixi/
+__pypackages__/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+cython_debug/
+.ruff_cache/
+
+# Environments and package managers
+.pipenv/
+poetry.toml
+
+# Framework and service data
+instance/
+.webassets-cache
+.scrapy/
+celerybeat-schedule*
+celerybeat.pid
+*.rdb
+*.aof
+*.pid
+mnesia/
+rabbitmq/
+rabbitmq-data/
+activemq-data/
+
+# Editors and IDEs
+.spyderproject
+.spyproject
+.ropeproject
+.idea/
+.vscode/
+
+# Temporary files
+tempCodeRunnerFile.py
+
+# PyPI configuration
+.pypirc
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Other local application state
+.abstra/
+.marimo/
