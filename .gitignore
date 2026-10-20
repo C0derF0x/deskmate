@@ -1,0 +1,13 @@
+# Secrets
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+
+# Generated local application data
+data/applications.json
