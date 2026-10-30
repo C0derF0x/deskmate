@@ -95,7 +95,7 @@ def get_response(history):
 
     max_tool_rounds = 5
 
-    for _ in range(max_tool_rounds):
+    for round_number in range(max_tool_rounds + 1):
 
         response = client.chat.completions.create(
             model="openai/gpt-oss-120b",
@@ -122,13 +122,22 @@ def get_response(history):
                 or "I'm not sure how to respond to that."
             )
 
+        # No more tool executions allowed.
+        # Give the model a chance to finish, but don't execute
+        # additional tools if it requests them.
+
+        if round_number == max_tool_rounds:
+            return (
+                "I couldn't complete the task "
+                "because it required too many steps."
+            )
 
         # =========================
         # Add assistant tool request
         # =========================
 
         messages.append(
-            assistant_message
+            assistant_message.model_dump(exclude_none=True)
         )
 
 
